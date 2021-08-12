@@ -1,0 +1,289 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: black;
+    overflow-x: hidden;
+    
+    
+
+}
+
+/*global*/
+
+main{
+    flex: 1;
+    padding-bottom: 70px;
+}
+
+
+
+/* header */
+
+header{
+background: rgb(31, 30, 30);
+font-size: 16px;
+min-width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-around;
+flex-wrap: wrap;
+color: red;
+min-height: 70px;
+}
+
+span i{
+    font-size: 25px;
+    color: white;
+}
+.nav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    opacity: .9;
+    overflow-x: hidden;
+    padding-top: 10%;
+    transition:  0.7s;
+}
+
+.nav a {
+    display: block;
+    padding: 20px 30px;
+    font-size: 25px;
+    text-decoration: none;
+    color: #ccc;
+}
+
+.nav a:hover {
+    color: #fff;
+    transition: 0.4s;
+}
+
+.nav .close{
+    position: absolute;
+    top: 0;
+    font-size: 30px;
+}
+
+/* Home Page */
+
+#showcase{
+    width: 100%;
+    padding: 20% 0 1% 0;
+    background: url("../images/showcase.jpg") no-repeat 0;
+    background-size: cover;
+    text-align: center;
+}
+
+#showcase-text{
+    background: rgba(20,20,20,0.6);
+    width: 100%;
+    color: white;
+    margin: 0 auto;
+    padding: 0 10px 15px 10px;
+}
+#showcase h1{
+    margin: 0;
+    padding: 30px;
+    font-size: 30px;
+}
+
+#showcase p{
+    font-size: 20px;
+}
+
+.container{
+    padding: 20px;
+}
+
+#home h2, h3{
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    
+}
+
+#home h2{
+    font-size: 40px;
+    padding-bottom: 30px;
+}
+
+.boxes-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.package{
+    max-width: 25%;
+    height: auto;
+    background: rgb(133, 1, 1);
+    border-radius: 20px;
+    padding: 10px 40px;
+}
+
+.package ul{
+    list-style-type: square;
+    font-size: 16px;
+    line-height: 2.6;
+}
+
+
+
+
+.package ul, .package h3{
+    max-width: 350px;
+    color: white;
+    padding-bottom: 10px;
+}
+/*Gallery Page*/
+
+.img-area img{
+    border-radius: 5%;
+}
+
+main .img-area{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    padding-left: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 100%;
+
+    
+}
+
+.img-area img{
+    width: 280px;
+    height: 190px;
+}
+
+.single-img{
+    padding: 20px;
+    cursor: pointer;
+}
+
+.img-area img:hover{
+    filter: grayscale(100%);
+    transform: scale(1.1);
+}
+
+/*Contact Page*/
+
+
+form {
+    color: white;
+    min-width:40%;
+    margin: 0 auto;
+  }
+
+  input + span {
+    position: relative;
+  }
+  
+  input + span::before {
+    position: absolute;
+    right: -20px;
+    top: 2px;
+  }
+
+  input:valid + span::before {
+    content: '✓';
+    font-size: 20px;
+    color: green;
+  }
+
+  input[type=text], [type=email], select, textarea{
+	width: 100%;
+    padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	resize: vertical;
+  }
+  
+  input[type=submit] {
+	background-color: red;
+	color: white;
+	padding: 12px 30px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+    float: right;
+    width: 100px;
+  }
+
+  input:hover[type=submit]{
+      background-color: darkred;
+  }
+
+  label {
+	padding: 12px 12px 12px 0;
+	display: inline-block;
+  }
+
+#contact{
+    padding: 30px;
+    line-height: 3em;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*footer*/
+
+footer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+    color: white;
+    background: rgb(31, 30, 30);
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 800px){
+    
+    .boxes-container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 30px;
+    }
+    
+    .package{
+        max-width: 100%;
+        height: auto;
+        background: rgb(133, 1, 1);
+        border-radius: 20px;
+        padding: 10px 40px;
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+
+    .package ul{
+        margin: 0 auto;
+    }
+
+
+    
+    
+}
